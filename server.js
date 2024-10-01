@@ -1,14 +1,11 @@
-import express from 'express';
-import cors from 'cors';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
 
+// Create an Express application
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 // Allow CORS from any origin
 app.use(cors({
